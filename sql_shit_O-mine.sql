@@ -3,13 +3,14 @@ select count(distinct hour_key) from vm_stats_latest where (snapshot_time betwee
 
 select count(*) from vm_stats_by_hour where (snapshot_time = '2019-09-11 00:00:00');
 
-select count(distinct day_key) from vm_stats_latest where (snapshot_time between <day-start> and <day-end>;
+select count(distinct day_key) from vm_stats_latest where (snapshot_time between '2019-09-12 16:52:06' and '2019-09-12 18:28:48');
 
-select count(*) from vm_stats_by_day where snapshot_time = <day-start>;
+select count(*) from vm_stats_by_day where (snapshot_time = '2019-09-12 00:00:00');
 
-select count(distinct month_key) from vm_stats_latest where (snapshot_time between '2019-09-01 00:00:00' and '2019-09-30 00:00:00');
+select count(distinct month_key) from vm_stats_latest where (snapshot_time between '2019-09-12 16:52:06' and '2019-09-12 18:28:48');
 
 select count(*) from vm_stats_by_month where (snapshot_time = '2019-09-30 00:00:00');
+
 
 
 select * from vm_stats_latest;
